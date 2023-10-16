@@ -13,13 +13,13 @@ public:
 	void TextoGRANDE(wstring Texto)
 	{
 		transform(Texto.begin(), Texto.end(), Texto.begin(), towupper);
-		_tprintf(L"Convers„o: %s\n", Texto.c_str());
+		_tprintf(L"Convers√£o: %s\n", Texto.c_str());
 	}
 
 	void Textopequeno(wstring Texto)
 	{
 		transform(Texto.begin(), Texto.end(), Texto.begin(), towlower);
-		_tprintf(L"Convers„o: %s\n", Texto.c_str());
+		_tprintf(L"Convers√£o: %s\n", Texto.c_str());
 	}
 
 	void TextoNormal(wstring Texto)
@@ -40,10 +40,13 @@ public:
 		wstring wTexto = Texto;
 
 		if (Inicio == true)
-			wTexto.insert(wTexto.begin(), Acrescentar);//Ir· acrescentar a letra ou n˙mero no inÌcio da frase.
-
+		{
+			wTexto.insert(wTexto.begin(), Acrescentar);//Ir√° acrescentar a letra ou n√∫mero no in√≠cio da frase.
+		}
 		if (Final == true)
-			wTexto.insert(wTexto.end(), Acrescentar);//Ir· acrescentar a letra ou n˙mero no final da frase.
+		{
+			wTexto.insert(wTexto.end(), Acrescentar);//Ir√° acrescentar a letra ou n√∫mero no final da frase.
+		}
 
 		_tprintf(L"Resultado: %s\n", wTexto.c_str());
 	}
@@ -65,8 +68,8 @@ public:
 
 		for (int i = 0; i < Quantidade; i++)
 			wTexto += Alfabeto[rand() % (sizeof(Alfabeto) - 1)];
-
-		_tprintf(L"Resultado aleatÛrio: %s\n", wTexto.c_str());
+		
+		_tprintf(L"Resultado aleat√≥rio: %s\n", wTexto.c_str());
 	}
 
 }Funcoes;
@@ -74,7 +77,7 @@ public:
 int main()
 {
 
-	cout << "O assistente est· formatando strings...\n";
+	cout << "O assistente est√° formatando strings...\n";
 
 	wstring Texto = L"Teste";
 
